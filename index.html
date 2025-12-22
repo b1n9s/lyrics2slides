@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyrics2Slides</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">Lyrics2Slides</h1>
+      <div class="header-controls">
+        <label for="bg-color">Background</label>
+        <input type="color" id="bg-color" value="#000000" aria-label="Slide background color">
+        <button id="download-btn" class="btn-primary">Download PPTX</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Left: Lyrics Input -->
+      <section class="input-section">
+        <!-- Primary -->
+        <div class="textarea-group">
+          <label for="primary-lyrics">Primary</label>
+          <textarea
+            id="primary-lyrics"
+            placeholder="Paste lyrics here...&#10;&#10;Separate slides with blank lines"
+          ></textarea>
+          <div class="font-settings">
+            <input type="text" id="font-primary" list="font-suggestions" value="Noto Sans SC" placeholder="Font name" aria-label="Primary font family">
+            <input type="number" id="size-primary" min="8" max="200" value="48" aria-label="Primary font size">
+            <span class="size-unit">pt</span>
+            <input type="color" id="color-primary" value="#ffffff" aria-label="Primary font color">
+          </div>
+        </div>
+
+        <!-- Secondary -->
+        <div class="textarea-group" id="secondary-group">
+          <label for="secondary-lyrics">Secondary</label>
+          <textarea
+            id="secondary-lyrics"
+            placeholder="Paste lyrics here...&#10;&#10;Separate slides with blank lines"
+          ></textarea>
+          <div class="font-settings" id="secondary-font-group">
+            <input type="text" id="font-secondary" list="font-suggestions" value="Arial" placeholder="Font name" aria-label="Secondary font family">
+            <input type="number" id="size-secondary" min="8" max="200" value="48" aria-label="Secondary font size">
+            <span class="size-unit">pt</span>
+            <input type="color" id="color-secondary" value="#ffffff" aria-label="Secondary font color">
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Slide Preview -->
+      <section class="preview-section">
+        <div id="slide-preview" class="slide-preview">
+          <div class="slide-content">
+            <div id="primary-text" class="primary-text"></div>
+            <div id="secondary-text" class="secondary-text"></div>
+          </div>
+        </div>
+        <div class="slide-nav">
+          <button id="prev-btn" class="nav-btn" aria-label="Previous slide">&lt;</button>
+          <span id="slide-counter" role="status" aria-live="polite">0 / 0</span>
+          <button id="next-btn" class="nav-btn" aria-label="Next slide">&gt;</button>
+        </div>
+        <div class="keyboard-hints">
+          <span class="hint" title="Use arrow keys to navigate slides">
+            <kbd>&larr;</kbd> <kbd>&rarr;</kbd> Navigate slides
+          </span>
+        </div>
+      </section>
+    </main>
+
+    <!-- Font suggestions datalist -->
+    <datalist id="font-suggestions">
+      <option value="Noto Sans SC">
+      <option value="Microsoft YaHei">
+      <option value="PingFang SC">
+      <option value="SimHei">
+      <option value="Arial">
+      <option value="Helvetica">
+      <option value="Georgia">
+      <option value="Verdana">
+      <option value="Times New Roman">
+      <option value="Courier New">
+      <option value="Impact">
+      <option value="Comic Sans MS">
+    </datalist>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
