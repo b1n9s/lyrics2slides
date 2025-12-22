@@ -8,10 +8,10 @@ export const state = {
     backgroundColor: '#000000',
     fontFamilyPrimary: 'Noto Sans SC',
     fontSizePrimary: 48,
-    fontColorPrimary: '#ffffff',
+    fontColorPrimary: '#ffff00',
     fontFamilySecondary: 'Arial',
     fontSizeSecondary: 48,
-    fontColorSecondary: '#ffffff'
+    fontColorSecondary: '#ffff00'
   }
 };
 
