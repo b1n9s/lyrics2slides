@@ -294,15 +294,36 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Keyboard Hints */
-.keyboard-hints {
-  text-align: center;
+/* Quick Start Guide */
+.quick-start {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
   margin-top: 0.5rem;
 }
 
-.hint {
+.quick-start-title {
   font-size: 0.75rem;
+  font-weight: 600;
   color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.quick-start-tips {
+  list-style: none;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.quick-start-tips li {
+  padding: 0.25rem 0;
+}
+
+.quick-start-tips strong {
+  color: var(--text-primary);
 }
 
 kbd {
