@@ -6,11 +6,13 @@ export const state = {
   currentSlide: 0,
   settings: {
     backgroundColor: '#000000',
-    fontFamilyPrimary: 'Noto Sans SC',
-    fontSizePrimary: 48,
+    fontFamilyPrimary: 'Kaiti SC',
+    fontSizePrimary: 64,
+    fontBoldPrimary: true,
     fontColorPrimary: '#ffff00',
-    fontFamilySecondary: 'Arial',
-    fontSizeSecondary: 48,
+    fontFamilySecondary: 'Calibri',
+    fontSizeSecondary: 40,
+    fontBoldSecondary: true,
     fontColorSecondary: '#ffff00'
   }
 };

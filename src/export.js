@@ -44,12 +44,14 @@ async function generatePptx() {
     const primarySettings = {
       font: settings.fontFamilyPrimary,
       size: settings.fontSizePrimary,
+      bold: settings.fontBoldPrimary,
       color: settings.fontColorPrimary
     };
 
     const secondarySettings = {
       font: settings.fontFamilySecondary,
       size: settings.fontSizeSecondary,
+      bold: settings.fontBoldSecondary,
       color: settings.fontColorSecondary
     };
 
@@ -70,6 +72,7 @@ async function generatePptx() {
           h: `${LAYOUT.CENTERED_HEIGHT_PERCENT}%`,
           fontSize: primarySettings.size,
           fontFace: primarySettings.font,
+          bold: primarySettings.bold,
           color: primarySettings.color.replace('#', ''),
           align: 'center',
           valign: 'middle',
@@ -85,6 +88,7 @@ async function generatePptx() {
             h: `${LAYOUT.PRIMARY_HEIGHT_PERCENT}%`,
             fontSize: primarySettings.size,
             fontFace: primarySettings.font,
+            bold: primarySettings.bold,
             color: primarySettings.color.replace('#', ''),
             align: 'center',
             valign: 'bottom',
@@ -100,6 +104,7 @@ async function generatePptx() {
             h: `${LAYOUT.SECONDARY_HEIGHT_PERCENT}%`,
             fontSize: secondarySettings.size,
             fontFace: secondarySettings.font,
+            bold: secondarySettings.bold,
             color: secondarySettings.color.replace('#', ''),
             align: 'center',
             valign: 'top',

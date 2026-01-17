@@ -30,10 +30,11 @@
             placeholder="Paste lyrics here...&#10;&#10;Separate slides with blank lines"
           ></textarea>
           <div class="font-settings">
-            <input type="text" id="font-primary" list="font-suggestions" value="Noto Sans SC" placeholder="Font name" aria-label="Primary font family">
-            <input type="number" id="size-primary" min="8" max="200" value="48" aria-label="Primary font size">
+            <input type="text" id="font-primary" list="font-suggestions" value="Kaiti SC" placeholder="Font name" aria-label="Primary font family">
+            <input type="number" id="size-primary" min="8" max="200" value="64" aria-label="Primary font size">
             <span class="size-unit">pt</span>
             <input type="color" id="color-primary" value="#ffff00" aria-label="Primary font color">
+            <label class="bold-label"><input type="checkbox" id="bold-primary" checked aria-label="Primary bold">B</label>
           </div>
         </div>
 
@@ -45,10 +46,11 @@
             placeholder="Paste lyrics here...&#10;&#10;Separate slides with blank lines"
           ></textarea>
           <div class="font-settings" id="secondary-font-group">
-            <input type="text" id="font-secondary" list="font-suggestions" value="Arial" placeholder="Font name" aria-label="Secondary font family">
-            <input type="number" id="size-secondary" min="8" max="200" value="48" aria-label="Secondary font size">
+            <input type="text" id="font-secondary" list="font-suggestions" value="Calibri" placeholder="Font name" aria-label="Secondary font family">
+            <input type="number" id="size-secondary" min="8" max="200" value="40" aria-label="Secondary font size">
             <span class="size-unit">pt</span>
             <input type="color" id="color-secondary" value="#ffff00" aria-label="Secondary font color">
+            <label class="bold-label"><input type="checkbox" id="bold-secondary" checked aria-label="Secondary bold">B</label>
           </div>
         </div>
       </section>
@@ -79,10 +81,12 @@
 
     <!-- Font suggestions datalist -->
     <datalist id="font-suggestions">
+      <option value="Kaiti SC">
       <option value="Noto Sans SC">
       <option value="Microsoft YaHei">
       <option value="PingFang SC">
       <option value="SimHei">
+      <option value="Calibri">
       <option value="Arial">
       <option value="Helvetica">
       <option value="Georgia">

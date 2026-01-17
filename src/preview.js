@@ -91,12 +91,14 @@ function renderPreview(state) {
   const primarySettings = {
     font: settings.fontFamilyPrimary,
     size: settings.fontSizePrimary,
+    bold: settings.fontBoldPrimary,
     color: settings.fontColorPrimary
   };
 
   const secondarySettings = {
     font: settings.fontFamilySecondary,
     size: settings.fontSizeSecondary,
+    bold: settings.fontBoldSecondary,
     color: settings.fontColorSecondary
   };
 
@@ -115,6 +117,7 @@ function renderPreview(state) {
     primaryText.textContent = slide.primary.join('\n');
     primaryText.style.fontFamily = primarySettings.font;
     primaryText.style.fontSize = `${primarySettings.size * fontScale}px`;
+    primaryText.style.fontWeight = primarySettings.bold ? 'bold' : 'normal';
     primaryText.style.color = primarySettings.color;
     secondaryText.textContent = '';
   } else {
@@ -122,11 +125,13 @@ function renderPreview(state) {
     primaryText.textContent = slide.primary.join('\n');
     primaryText.style.fontFamily = primarySettings.font;
     primaryText.style.fontSize = `${primarySettings.size * fontScale}px`;
+    primaryText.style.fontWeight = primarySettings.bold ? 'bold' : 'normal';
     primaryText.style.color = primarySettings.color;
 
     secondaryText.textContent = slide.secondary.join('\n');
     secondaryText.style.fontFamily = secondarySettings.font;
     secondaryText.style.fontSize = `${secondarySettings.size * fontScale}px`;
+    secondaryText.style.fontWeight = secondarySettings.bold ? 'bold' : 'normal';
     secondaryText.style.color = secondarySettings.color;
   }
 

@@ -12,6 +12,7 @@ export function initControls() {
   const fontPrimary = document.getElementById('font-primary');
   const sizePrimary = document.getElementById('size-primary');
   const colorPrimary = document.getElementById('color-primary');
+  const boldPrimary = document.getElementById('bold-primary');
 
   fontPrimary.addEventListener('input', (e) => {
     updateSettings({ fontFamilyPrimary: e.target.value });
@@ -34,10 +35,15 @@ export function initControls() {
     updateSettings({ fontColorPrimary: e.target.value });
   });
 
+  boldPrimary.addEventListener('change', (e) => {
+    updateSettings({ fontBoldPrimary: e.target.checked });
+  });
+
   // Secondary font settings
   const fontSecondary = document.getElementById('font-secondary');
   const sizeSecondary = document.getElementById('size-secondary');
   const colorSecondary = document.getElementById('color-secondary');
+  const boldSecondary = document.getElementById('bold-secondary');
 
   fontSecondary.addEventListener('input', (e) => {
     updateSettings({ fontFamilySecondary: e.target.value });
@@ -57,5 +63,9 @@ export function initControls() {
 
   colorSecondary.addEventListener('input', (e) => {
     updateSettings({ fontColorSecondary: e.target.value });
+  });
+
+  boldSecondary.addEventListener('change', (e) => {
+    updateSettings({ fontBoldSecondary: e.target.checked });
   });
 }

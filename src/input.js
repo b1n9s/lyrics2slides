@@ -1,9 +1,10 @@
-import { state, setSlides, setPrimaryLyrics, setSecondaryLyrics } from './state.js';
+import { state, setSlides, setPrimaryLyrics, setSecondaryLyrics, updateSettings } from './state.js';
 import { parseLyrics } from './parser.js';
 
 let primaryTextarea;
 let secondaryTextarea;
 let secondaryGroup;
+let secondaryHasBeenUsed = false;
 
 function setSecondaryEnabled(enabled) {
   secondaryTextarea.disabled = !enabled;
@@ -37,6 +38,16 @@ export function initInput() {
       // Enable/disable secondary based on primary content
       const hasPrimary = primaryTextarea.value.trim().length > 0;
       setSecondaryEnabled(hasPrimary);
+
+      // When secondary is first used, set both font sizes to 40
+      const hasSecondary = secondaryTextarea.value.trim().length > 0;
+      if (hasSecondary && !secondaryHasBeenUsed) {
+        secondaryHasBeenUsed = true;
+        updateSettings({ fontSizePrimary: 40, fontSizeSecondary: 40 });
+        // Update the UI inputs
+        document.getElementById('size-primary').value = 40;
+        document.getElementById('size-secondary').value = 40;
+      }
 
       const slides = parseLyrics(state.primaryLyrics, state.secondaryLyrics);
       setSlides(slides);
